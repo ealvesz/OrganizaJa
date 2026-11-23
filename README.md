@@ -1,80 +1,61 @@
-# OrganizaJá — Controle de Despesas Pessoais
+# OrganizaJá 💰
 
-Projeto acadêmico desenvolvido em **React Native** com **Expo** e JavaScript.
+Aplicativo mobile desenvolvido para auxiliar no controle financeiro pessoal, permitindo organizar despesas, acompanhar gastos e administrar o orçamento mensal de maneira simples e prática.
 
-## 1. Problema que o aplicativo procura resolver
+## 📱 Sobre o projeto
 
-Muitas pessoas fazem pequenas compras durante o mês e depois têm dificuldade para lembrar quanto gastaram e em quais categorias. O OrganizaJá permite registrar essas despesas e compará-las com um limite mensal definido pelo próprio usuário.
+O OrganizaJá surgiu com a proposta de facilitar a organização financeira no dia a dia. Por meio de uma interface intuitiva, o usuário consegue visualizar suas movimentações e acompanhar quanto já gastou e quanto ainda possui disponível no orçamento.
 
-## 2. Funcionalidades
+## ✨ Funcionalidades
 
-- **Painel inicial:** mostra o total gasto no mês, o orçamento definido e o valor que ainda está disponível.
-- **Cadastro de despesas:** registra descrição, valor e categoria.
-- **Edição e exclusão:** permite corrigir ou remover um lançamento.
-- **Categorias:** alimentação, transporte, moradia, lazer, saúde, educação e outros.
-- **Histórico:** lista os lançamentos e permite pesquisar pela descrição e filtrar por categoria.
-- **Orçamento mensal:** permite definir ou alterar o limite de gastos e visualizar o percentual utilizado.
-- **Resumo por categoria:** apresenta quanto foi gasto em cada categoria no mês atual.
-- **Armazenamento local:** usa AsyncStorage para manter os registros no aparelho mesmo depois de fechar o aplicativo.
-- **Validação:** verifica a descrição e o valor antes de salvar.
+- **Resumo financeiro:** visualização do total gasto, orçamento mensal e valor disponível.
+- **Cadastro de despesas:** registro de gastos com descrição, valor e categoria.
+- **Categorias:** organização das despesas por alimentação, transporte, moradia, lazer, saúde, educação e outros.
+- **Histórico:** consulta das movimentações cadastradas.
+- **Pesquisa e filtros:** localização e organização das despesas.
+- **Edição e exclusão:** gerenciamento das despesas registradas.
+- **Controle de orçamento:** definição de limite mensal e acompanhamento dos gastos por categoria.
 
-O aplicativo começa sem despesas cadastradas. Assim, os primeiros registros são feitos durante o teste ou a demonstração.
-
-## 3. Tecnologias utilizadas
+## 🛠️ Tecnologias utilizadas
 
 - React Native
-- Expo SDK 54
+- Expo
 - JavaScript
-- AsyncStorage (`@react-native-async-storage/async-storage`)
 
-## 4. Como executar no celular
+## 🚀 Como executar o projeto
 
-1. Instale o **Node.js LTS** no computador.
-2. Instale o **Expo Go** no iPhone ou Android.
-3. Extraia o arquivo ZIP.
-4. Abra a pasta `OrganizaJa` no terminal.
-5. Execute `npm install`.
-6. Execute `npx expo start`.
-7. Leia o QR Code com a câmera do iPhone ou pelo Expo Go no Android.
+1. Clone o repositório:
 
-Se o celular e o computador não se conectarem pela rede local, tente `npx expo start --tunnel`.
+   ```bash
+   git clone https://github.com/ealvesz/OrganizaJa.git
+   ```
 
-## 5. Roteiro para testar as funcionalidades
+2. Entre na pasta:
 
-1. Abra o aplicativo e confira o painel vazio.
-2. Toque em **Adicionar despesa**.
-3. Cadastre, por exemplo, `Almoço`, valor `28,50`, categoria `Alimentação`.
-4. Cadastre outra despesa em uma categoria diferente.
-5. Abra **Histórico**, pesquise pela descrição e teste o filtro de categoria.
-6. Edite uma despesa e confira se o valor foi atualizado.
-7. Exclua um lançamento e confirme a exclusão.
-8. Abra **Orçamento**, altere o limite mensal e confira o valor disponível.
-9. Feche e abra o aplicativo novamente para verificar se os dados continuam salvos.
+   ```bash
+   cd OrganizaJa
+   ```
 
-## 6. Como explicar o funcionamento
+3. Instale as dependências:
 
-O estado da aplicação é controlado com os hooks `useState`, `useEffect` e `useMemo`. Os lançamentos ficam em uma lista de objetos JavaScript. Cada objeto guarda um identificador, descrição, valor, categoria e data de criação.
+   ```bash
+   npm install
+   ```
 
-O total mensal é calculado somando os lançamentos cuja data pertence ao mês atual. O valor disponível é o orçamento menos o total gasto. O AsyncStorage salva a lista de despesas e o orçamento no armazenamento local do aparelho.
+4. Inicie o Expo:
 
-## 7. Roteiro sugerido para o vídeo de 30 segundos
+   ```bash
+   npx expo start
+   ```
 
-- **0–5 s:** mostrar a tela inicial e explicar que o app organiza despesas pessoais.
-- **5–12 s:** cadastrar uma despesa com descrição, valor e categoria.
-- **12–18 s:** mostrar o lançamento no histórico e pesquisar ou filtrar.
-- **18–24 s:** editar ou excluir um lançamento.
-- **24–30 s:** mostrar o orçamento mensal e o valor disponível.
+5. Abra o aplicativo utilizando o Expo Go ou um emulador compatível.
 
-Grave a tela do aplicativo em execução no Expo Go. O vídeo deve mostrar a navegação real, e não apenas imagens ilustrativas.
+## 🎯 Objetivo acadêmico
 
-## 8. Limites do projeto
+Projeto desenvolvido como parte das atividades acadêmicas do curso de Análise e Desenvolvimento de Sistemas, com o objetivo de aplicar conhecimentos de desenvolvimento mobile e criação de interfaces.
 
-Este é um protótipo acadêmico de controle de despesas. Os dados ficam armazenados localmente no aparelho; não há login, sincronização em nuvem ou integração bancária. O orçamento é um limite informado pelo usuário, não uma consulta à conta bancária.
+## 👨‍💻 Desenvolvedor
 
-## 9. Como gravar a tela no iPhone
+**Kauã Kairon Alves de Melo**
 
-1. Abra a Central de Controle.
-2. Toque no botão **Gravação da Tela**. Se ele não aparecer, adicione o controle em Ajustes > Central de Controle.
-3. Volte ao Expo Go e faça a demonstração seguindo o roteiro acima.
-4. Pare a gravação pelo indicador vermelho ou pela Central de Controle.
-5. Confira o vídeo antes de anexar ao AVA. Procure mostrar texto legível, sem notificações pessoais na tela.
+GitHub: [@ealvesz](https://github.com/ealvesz)
